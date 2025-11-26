@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# Check we got a user id
+# Checks a user id
 if [ $# -ne 1 ]; then
   echo "Usage: $0 <user_id>"
   exit 1
 fi
 
 id="$1"
+#assigne id to client pipe to create id.pipe
 CLIENT_PIPE="$id.pipe"
 SERVER_PIPE="server.pipe"
 
@@ -16,7 +17,7 @@ if [ ! -p "$SERVER_PIPE" ]; then
   exit 1
 fi
 
-# Create our private pipe if it doesn't exist
+# Create our private pipe
 if [ ! -p "$CLIENT_PIPE" ]; then
   mkfifo "$CLIENT_PIPE"
 fi
@@ -132,7 +133,7 @@ while true; do
         echo "ERROR:$msg"
         ;;
       *)
-        # Shouldn't normally happen, but show it raw
+      
         echo "$response"
         ;;
     esac
