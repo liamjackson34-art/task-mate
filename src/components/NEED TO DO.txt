@@ -1,0 +1,9 @@
+make it so friends actually makes a pending request with notification. (right now it automatically adds anyone)
+
+make a proper login and register system (we arent storing or using any passwords)
+
+rework projects in order to make everything more intuitive and less hoops
+
+redo CSS and contente pages, about us and home page as well as footer
+
+fix the chat and the notification system. (if not enough time just scrap it)
